@@ -4,6 +4,7 @@ const pdf = require('html-pdf');
 const cors = require('cors');
 const router = express.Router()
 const pdfTemplate = require('./documents/index')
+const datos = require('./db/data.json')
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -27,7 +28,7 @@ let options = {
            ` <div>
                 <div style='display:flex;max-height:30mm; flex-direction: row; justify-content: space-between;text-align: end;'>
                     <div>
-                        <img style="width:80px;" src='https://i.ibb.co/WDjYbZG/default-1.jpg' />
+                        <img style="width:10mm;" src='https://i.ibb.co/WDjYbZG/default-1.jpg' />
                     </div>
                     <div>
                         <h3>ENTHEUS - REPORTE DE CREDENCIALES</h3>

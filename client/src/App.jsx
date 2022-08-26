@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import { saveAs } from 'file-saver'
-
+import data from './db/data.json'
 
 function App() {
   const [state, setState] = useState({
@@ -13,10 +13,6 @@ function App() {
 
   })
 
-  const data = {"legajo":6,"name":"Home Ing","credential":"com.moonfruit.Fix San","fvec":"3/29/2022","state":6}
-
-
- 
 
   const handleChange = ({ target: { value, name } }) => setState({ ...state, [name]: value })
 
