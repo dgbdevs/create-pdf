@@ -13,11 +13,16 @@ function App() {
 
   })
 
+  const data = {"legajo":6,"name":"Home Ing","credential":"com.moonfruit.Fix San","fvec":"3/29/2022","state":6}
+
+
+ 
+
   const handleChange = ({ target: { value, name } }) => setState({ ...state, [name]: value })
 
   const createPDF = () => {
-    console.log(state)
-    axios.post('http://localhost:5000/createPDF', state)
+    console.log(data)
+    axios.post('http://localhost:5000/createPDF', data)
       .then(() => axios.get('http://localhost:5000/fetchPDF', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
