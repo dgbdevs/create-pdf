@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const pdf = require('html-pdf');
 const cors = require('cors');
 const router = express.Router()
-
 const pdfTemplate = require('./documents/index')
 
 const app = express();
@@ -23,12 +22,12 @@ let options = {
     "height": "210mm",        // allowed units: mm, cm, in, px
     "width": "295mm",
     "header": {
-        "height": "20mm",
+        "height": "30mm",
         "contents":
            ` <div>
-                <div style='display:flex; flex-direction: row; justify-content: space-between;text-align: end;'>
+                <div style='display:flex;max-height:30mm; flex-direction: row; justify-content: space-between;text-align: end;'>
                     <div>
-                        <img style="width:80px;" src="https://firebasestorage.googleapis.com/v0/b/employee-entheus.appspot.com/o/profilepics%2Fdefault.jpg?alt=media&token=49505856-a9e0-4cf6-b070-0fd0311ded9c" />
+                        <img style="width:80px;" src='https://i.ibb.co/WDjYbZG/default-1.jpg' />
                     </div>
                     <div>
                         <h3>ENTHEUS - REPORTE DE CREDENCIALES</h3>
